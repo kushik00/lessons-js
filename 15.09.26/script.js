@@ -58,26 +58,31 @@
 let title = prompt("Введіть назву товару:");
 let count = Number(prompt("Введіть кількість:"));
 let price = Number(prompt("Введіть ціну за одиницю:"));
-let shopCard = confirm('чи є у тебе карта магазину?')
-let deliveryType = prompt('курер, пошта, самовивіз')
+let shopCard = confirm("Чи є у тебе карта магазину?");
+let deliveryType = prompt("кур'єр, пошта, самовивіз");
 
 let total = count * price;
 
-//<2000 - 0%
-//>2000 - 5%
-//5000 - 10%
-//>10000 - 15%
-
-let shopDiscount = 0
-if (total >= 10000){
-    shopDiscount = 15
-} else if ( total >= 5000){
-    shopDiscount = 5
+let discount = 0;
+if (total >= 5000 || shopCard) {
+    discount = 10;
 }
 
-//<2000 - 5%
-//>2000 - 10%
-//5000 - 12%
-//>10000 - 15%
+let discountedTotal = total * (1 - discount / 100);
 
-let shopDiscountCard 
+let deliveryCost = 0;
+switch (deliveryType) {
+    case "пошта":
+        deliveryCost = 100;
+        break;
+    case "кур'єр":
+        deliveryCost = 200;
+        break;
+    case "самовивіз":
+        deliveryCost = 0;
+        break;
+}
+
+let finalPrice = discountedTotal + deliveryCost;
+
+alert("Фінальна сума до сплати: " + finalPrice + " грн");
