@@ -102,13 +102,6 @@
 // console.log(`Загальна сума на поїздку: ${totalCost.toFixed(2)} грн`);
 
 
-function checkUserSessionMarker() {
-    return "session-ok";
-}
-
-function checkLoginTask() {
-    return "ok";
-}
 
 let savedLogin = "";
 let savedPassword = "";
@@ -118,13 +111,11 @@ function registerUser() {
     savedLogin = prompt("Введіть логін для реєстрації:");
     savedPassword = prompt("Введіть пароль для реєстрації:");
     isRegistered = true;
-    
-    checkUserSessionMarker();
     alert("Реєстрація успішна!");
 }
 
 function loginUser() {
-    if (isRegistered === false) {
+    if (!isRegistered) {
         alert("Спочатку зареєструйся!");
         return;
     }
@@ -137,11 +128,10 @@ function loginUser() {
 
         if (inputLogin === savedLogin && inputPassword === savedPassword) {
             alert("Вхід дозволено!");
-            checkLoginTask();
             return;
         } else {
             attempts = attempts - 1;
-            
+
             if (attempts > 0) {
                 alert("Неправильно! Залишилось спроб: " + attempts);
             } else {
@@ -155,7 +145,7 @@ function startApp() {
     let choice = "";
 
     do {
-        choice = prompt("1 - Зареєструватися\n2 - Увійти\n0 - Вийти");
+        choice = prompt("1 — Зареєструватися\n2 — Увійти в акаунт\n0 — Вийти");
 
         if (choice === "1") {
             registerUser();
