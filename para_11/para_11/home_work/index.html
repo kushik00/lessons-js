@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Налаштування профілю</title>
+  <link rel="stylesheet" href="/home_work/scyle.css">
+</head>
+<body>
+  <div class="card" id="card">
+    <h1>Налаштування профілю</h1>
+    
+    <label for="nameInput">Ім'я:</label>
+    <input type="text" id="nameInput" placeholder="Введіть ім'я">
+    <p>Ім'я: <span id="namePreview">Гість</span></p>
+    
+    <button id="saveBtn">Підтвердити</button>
+    <p id="statusMsg"></p>
+    
+    <label for="langSelect">Мова:</label>
+    <select id="langSelect">
+      <option value="ua">Українська</option>
+      <option value="en">English</option>
+    </select>
+    
+    <button id="themeBtn" class="secondary">Темна тема</button>
+    <button id="toggleInfoBtn" class="secondary">Додаткова інформація</button>
+    
+    <div id="extraInfo" class="hidden">
+      <p>Тут розміщена додаткова інформація.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
