@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  background: #eef2f7;
+  color: #201f20;
+}
+
+.card {
+  width: 400px;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+input, select {
+  border: 1px solid #f43030;
+  background: #fff;
+  color: inherit;
+}
+
+button {
+  margin-top: 15px;
+  border: none;
+  background: #f18d8d;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #e42a2a;
+}
+
+.secondary {
+  background: #e2e8f0;
+  color: #243041;
+}
+
+.secondary:hover {
+  background: #cbd5e1;
+}
+
+.hidden {
+  display: none;
+}
+
+.success {
+  font-weight: bold;
+  color: #16a34a;
+  margin-top: 10px;
+}
+
+.card.dark {
+  background: #1e293b;
+  color: white;
+}
+
+.card.dark input, 
+.card.dark select {
+  background: #334155;
+  color: white;
+  border-color: #475569;
+}
+
+.card.dark .secondary {
+  background: #475569;
+  color: white;
+}
+
+#statusMsg {
+  margin-top: 10px;
+}
