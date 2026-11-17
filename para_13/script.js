@@ -103,7 +103,6 @@ addBtn.addEventListener('click', function() {
   renderApplications();
 });
 
-// Додаємо підтримку натискання Enter у полях вводу
 participantNameInput.addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
     addBtn.click();
