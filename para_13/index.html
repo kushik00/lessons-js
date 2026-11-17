@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Клуб подій</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>Клуб подій</h1>
+      <p>Керуйте заявками на участь у шкільних активностях</p>
+    </header>
+    <main class="main-grid">
+      <section class="card form-card">
+        <h2>Нова заявка</h2>
+        <div id="application-form">
+          <div class="form-group">
+            <label for="participant-name">Ім'я учасника</label>
+            <input type="text" id="participant-name" placeholder="Марія Коваль" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="event-name">Назва події</label>
+            <input type="text" id="event-name" placeholder="Хакатон ліцею" autocomplete="off">
+          </div>
+          <div id="error-message" class="error-text hidden">Будь ласка, заповніть обидва поля!</div>
+          <button type="button" id="add-btn" class="btn-primary">+ Додати заявку</button>
+        </div>
+      </section>
+      <section class="card participants-card">
+        <h2>Учасники</h2>
+        <div class="stats-row">
+          <div class="stat-box">
+            <span class="stat-label">Усього заявок</span>
+            <span id="total-count" class="stat-value">0</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Підтверджено</span>
+            <span id="confirmed-count" class="stat-value">0</span>
+          </div>
+        </div>
+        <div class="participants-list" id="participants-list"></div>
+        <div class="card-footer">
+          <button type="button" id="clear-all-btn" class="btn-clear">Очистити всі заявки</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
